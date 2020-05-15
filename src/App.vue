@@ -23,11 +23,9 @@ export default {
   components: {
     HelloWorld,
   },
-
-  mounted() {
-    this.$options.sockets.onmessage = (data) => console.log(data)
+  mounted () {
+    this.$mqtt.subscribe('#')
   },
-
   data: () => ({
     //
   }),
