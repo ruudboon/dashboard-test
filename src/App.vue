@@ -24,6 +24,10 @@ export default {
     HelloWorld,
   },
 
+  mounted() {
+    this.$options.sockets.onmessage = (data) => console.log(data)
+  },
+
   data: () => ({
     //
   }),
